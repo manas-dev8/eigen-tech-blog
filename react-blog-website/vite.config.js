@@ -3,10 +3,18 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  build: {
-    rollupOptions: {
-      external: [], // Leave this array empty unless you need to exclude specific dependencies
+  base: '/', // Ensure assets resolve correctly in production
+  resolve: {
+    alias: {
+      '/public': '/src/assets', // Ensures paths resolve properly
     },
   },
+  build: {
+    rollupOptions: {
+      input: '/index.html',
+    },
+  },
+  server: {
+    historyApiFallback: true, // Handles React Router paths during development
+  },
 });
-
