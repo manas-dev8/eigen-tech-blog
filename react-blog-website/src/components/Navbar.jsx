@@ -19,7 +19,7 @@ const Navbar = () => {
     return (
         <header className='bg-gray-500 text-white fixed top-0 left-0 right-0 z-50'>
             <nav className='px-4 py-4 max-w-7xl mx-auto flex justify-between items-center'>
-                <img src="public/e.png" alt="eigen" className='w-24' />
+                <img src="/e.png" alt="eigen" className='w-24' />
 
                 {/* Desktop Navigation */}
                 <ul className='md:flex gap-12 text-lg hidden'>
